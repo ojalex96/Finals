@@ -23,7 +23,7 @@ public class CIForm extends JFrame {
     public CIForm() {
         initComponents();
     }
-//Event handler for add button
+    //Event handler for add button
     private void button1ActionPerformed(ActionEvent e) throws SQLException, ClassNotFoundException {
         // TODO add your code here
         String CustNo;
@@ -119,7 +119,7 @@ public class CIForm extends JFrame {
             updatetable();
         }
     }
-
+    //Edit Button Click event
     private void button2ActionPerformed(ActionEvent e) throws ClassNotFoundException, SQLException {
         // TODO add your code here
         String CustNo;
@@ -176,7 +176,7 @@ public class CIForm extends JFrame {
 
 
     }
-
+    //Delete button click event
     private void button3ActionPerformed(ActionEvent e) throws ClassNotFoundException, SQLException {
         // TODO add your code here
         String CustNo;
@@ -211,7 +211,7 @@ public class CIForm extends JFrame {
 
         updatetable();
     }
-
+    //Click event on table
     private void table1MouseClicked(MouseEvent e) throws ClassNotFoundException, SQLException {
         // TODO add your code here
         String[] cols = {"Year", "Starting","Interest","Ending Value"};
@@ -398,14 +398,14 @@ public class CIForm extends JFrame {
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
-
+    //Create columns for table1
     public void SetColums(){
         String[] cols = {"Number", "Name","Deposit","Years","Type of Savings"};
         String[][] data = {{"d1", "d1.1"},{"d2", "d2.1"}};
         DefaultTableModel model = new DefaultTableModel(data, cols);
         table1.setModel(model);
     }
-
+    //Method to retrieve data
     public void updatetable() throws ClassNotFoundException, SQLException {
 
         int c;
@@ -458,6 +458,7 @@ public class CIForm extends JFrame {
     private JButton button3;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        //Git Repository Link:https://github.com/ojalex96/Finals.git
         CIForm ciForm = new CIForm();
         ciForm.SetColums();
         ciForm.updatetable();
